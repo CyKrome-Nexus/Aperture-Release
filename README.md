@@ -4,14 +4,34 @@ Official distribution repository for **Aperture**, an enterprise-grade API workb
 
 This repository hosts released binaries only. It contains no source code.
 
+## Install
+
+macOS and Linux can install from the terminal:
+
+```bash
+curl -fsSL https://github.com/CyKrome-Nexus/Aperture-Release/releases/latest/download/install.sh | bash
+```
+
+Platform-specific installers are also attached to every release:
+
+```bash
+curl -fsSL https://github.com/CyKrome-Nexus/Aperture-Release/releases/latest/download/install-mac.sh | bash
+curl -fsSL https://github.com/CyKrome-Nexus/Aperture-Release/releases/latest/download/install-linux.sh | bash
+```
+
+The macOS installer extracts the `.app.tar.gz` into `/Applications` and removes
+Gatekeeper quarantine attributes. The Linux installer installs the AppImage under
+`~/.local/share/Aperture`, creates a desktop entry, and links `aperture` into
+`~/.local/bin`.
+
 ## Download
 
 Grab the latest build from the [**Releases**](../../releases/latest) page.
 
 | Platform | File |
 | --- | --- |
-| macOS (Apple Silicon) | `Aperture_<version>_aarch64.dmg` |
-| macOS (Intel) | `Aperture_<version>_x64.dmg` |
+| macOS (Apple Silicon) | `Aperture_<version>_aarch64.dmg` or `Aperture_<version>_aarch64.app.tar.gz` |
+| macOS (Intel) | `Aperture_<version>_x64.dmg` or `Aperture_<version>_x64.app.tar.gz` |
 | Windows | `Aperture_<version>_x64_en-US.msi` or `Aperture_<version>_x64-setup.exe` |
 | Linux | `Aperture_<version>_amd64.AppImage`, `Aperture_<version>_amd64.deb`, or `Aperture-<version>-1.x86_64.rpm` |
 
