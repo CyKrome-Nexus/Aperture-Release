@@ -339,12 +339,12 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
 <main>
 <!-- ── Hero ─────────────────────────────────────────────────────────── -->
 <div class="hero wrap">
-  <span class="badge"><b>v1.1</b><span class="dot"></span> Desktop · macOS, Windows, Linux</span>
+  <span class="badge"><b class="app-version">v1.2.0</b><span class="dot"></span> Desktop · macOS, Windows, Linux</span>
   <h1>The API workbench<br>that sends from the metal.</h1>
   <p class="lede">
-    REST, GraphQL and WebSocket in one workspace with environments, variables, post-response
-    tests, a collection runner and a load generator. Requests leave from Rust, not the webview,
-    so there is no CORS, no preflight, and redirects, TLS and proxies behave the way you set them.
+    REST, GraphQL, gRPC, WebSocket and SSE in one native workspace with visual flow graphs, an embedded mock server,
+    environments, variables, post-response tests, a collection runner and a load generator. Requests leave from Rust,
+    not the webview, so there is no CORS, no preflight, and redirects, TLS, mTLS and proxies behave the way you set them.
   </p>
   <div class="cta">
     <a class="btn primary" href="#download">Download Aperture</a>
@@ -396,10 +396,8 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
 
 <div class="strip" aria-hidden="true">
   <div class="track">
-    <span>REST</span><span>GraphQL</span><span>WebSocket</span><span>OpenAPI 3</span><span>Swagger 2</span>
-    <span>Postman v2.1</span><span>HAR</span><span>cURL</span><span>CSV</span><span>OAuth2</span><span>JSON Schema</span>
-    <span>REST</span><span>GraphQL</span><span>WebSocket</span><span>OpenAPI 3</span><span>Swagger 2</span>
-    <span>Postman v2.1</span><span>HAR</span><span>cURL</span><span>CSV</span><span>OAuth2</span><span>JSON Schema</span>
+    <span>REST</span><span>GraphQL</span><span>gRPC</span><span>WebSocket</span><span>SSE</span><span>SOAP</span><span>Flow Graph</span><span>Mock Server</span><span>mTLS</span><span>AWS SigV4</span><span>OpenAPI 3</span><span>Postman v2.1</span><span>cURL</span><span>JSON Schema</span><span>Load Testing</span>
+    <span>REST</span><span>GraphQL</span><span>gRPC</span><span>WebSocket</span><span>SSE</span><span>SOAP</span><span>Flow Graph</span><span>Mock Server</span><span>mTLS</span><span>AWS SigV4</span><span>OpenAPI 3</span><span>Postman v2.1</span><span>cURL</span><span>JSON Schema</span><span>Load Testing</span>
   </div>
 </div>
 
@@ -408,19 +406,23 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
   <div class="head rv">
     <span class="eyebrow">One workspace</span>
     <h2>Everything the request touches, in one window.</h2>
-    <p>Thirteen screens built on the Nocturne design system, with four accent palettes, a light mode,
+    <p>Thirteen native screens built on the Nocturne design system, with four accent palettes, light & dark modes,
        three densities, and perceptual OKLCH colour throughout.</p>
   </div>
   <div class="grid">
     <div class="card rv"><h3><span class="ico">↗</span>REST</h3><p>Params, headers, auth and body with response body, headers, cookies, a timeline, and TTFB plus total timing on every send.</p></div>
-    <div class="card rv"><h3><span class="ico">◇</span>GraphQL</h3><p>Introspect into a browsable schema, edit variables, and read Apollo <code>extensions.tracing</code> when the server sends it.</p></div>
-    <div class="card rv"><h3><span class="ico">⇄</span>WebSocket</h3><p>Connect, send, and watch a frame log with direction, size and close reasons. It is the one transport that runs in the webview.</p></div>
-    <div class="card rv"><h3><span class="ico">{}</span>Variables</h3><p><code>{{var}}</code> across URL, params, headers and body. Runtime → environment → collection → global precedence, with unresolved names shown in red <em>before</em> you send.</p></div>
+    <div class="card rv"><h3><span class="ico">◇</span>GraphQL</h3><p>Introspect into a browsable schema, edit variables, write test assertions, and inspect Apollo <code>extensions.tracing</code>.</p></div>
+    <div class="card rv"><h3><span class="ico">⎔</span>Flow Graph</h3><p>Visual node pipeline with execution wires, condition branching, delays, and dynamic <code>{{variable}}</code> propagation.</p></div>
+    <div class="card rv"><h3><span class="ico">☵</span>gRPC &amp; SOAP</h3><p>Protobuf reflection, streaming RPCs, and automated SOAP XML envelope generation running natively from Rust.</p></div>
+    <div class="card rv"><h3><span class="ico">⇄</span>WebSocket &amp; SSE</h3><p>Connect and inspect real-time frames or stream Server-Sent Events (SSE) live with timing and direction.</p></div>
+    <div class="card rv"><h3><span class="ico">⚿</span>Security &amp; mTLS</h3><p>Mutual TLS (mTLS) with client certs and custom CA bundles, AWS SigV4 request signing, OAuth2, and proxy routing.</p></div>
+    <div class="card rv"><h3><span class="ico">⛶</span>Mock Server</h3><p>Embedded local mock server engine with configurable routes, status simulation, and instant response mocking.</p></div>
+    <div class="card rv"><h3><span class="ico">{}</span>Variables</h3><p><code>{{var}}</code> across URL, params, headers and body. Runtime → environment → collection → global precedence with pre-send validation.</p></div>
     <div class="card rv"><h3><span class="ico">✓</span>Tests</h3><p><code>pm.test</code>, <code>pm.expect</code>, <code>pm.response</code> and <code>pm.*.set</code>, plus <code>matchSchema</code> against schemas from your imported OpenAPI spec.</p></div>
-    <div class="card rv"><h3><span class="ico">▶</span>Runner</h3><p>Sequential collection runs, N iterations or one per CSV row, captured variables carried between steps, and a failure table that points at the assertion.</p></div>
+    <div class="card rv"><h3><span class="ico">▶</span>Runner &amp; Monitors</h3><p>Sequential collection runs, N iterations or CSV data-driven rows, captured variables, and continuous collection monitors.</p></div>
     <div class="card rv"><h3><span class="ico">∿</span>Load</h3><p>N virtual users on ramp, constant or spike shapes, with live one-second buckets, latency percentiles and the response-code mix.</p></div>
     <div class="card rv"><h3><span class="ico">↓</span>Import</h3><p>OpenAPI 3 and Swagger 2 (JSON <em>and</em> YAML), Postman v2.1, HAR and cURL, with example bodies and schema assertions generated on the way in.</p></div>
-    <div class="card rv"><h3><span class="ico">▤</span>Console &amp; Docs</h3><p>Every send from every screen logged with headers and timing; docs generated from the real wire request, with cURL, JS, Python and Go snippets.</p></div>
+    <div class="card rv"><h3><span class="ico">▤</span>Console &amp; Docs</h3><p>Every send from every screen logged with microsecond DNS/TLS/TTFB waterfall, living API docs, and an integrated terminal panel.</p></div>
   </div>
 </section>
 
@@ -445,9 +447,9 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
       <div class="row"><span class="node">Svelte 5 UI</span><span class="wire"></span><span class="node hot">Rust · reqwest</span></div>
       <div class="row"><span class="node hot">Rust · reqwest</span><span class="wire back"></span><span class="node">Your API</span></div>
       <div class="row" style="gap:8px;flex-wrap:wrap">
-        <span class="node">pooled client</span><span class="node">cookie jar</span><span class="node">redirect policy</span><span class="node">TLS</span>
+        <span class="node">pooled client</span><span class="node">cookie jar</span><span class="node">redirect policy</span><span class="node">TLS / mTLS</span>
       </div>
-      <p class="note">// six IPC commands · seven Rust tests · 61 assertions in the TS self-check</p>
+      <p class="note">// native IPC commands · Rust core engine · self-contained offline architecture</p>
     </div>
   </div>
 </section>
@@ -462,19 +464,20 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
   </div>
   <div class="stats rv">
     <div class="stat"><b>13</b><span>screens</span></div>
+    <div class="stat"><b>6</b><span>transports</span></div>
     <div class="stat"><b>6</b><span>import formats</span></div>
     <div class="stat"><b>4</b><span>accent palettes</span></div>
-    <div class="stat"><b>68</b><span>tests &amp; assertions</span></div>
     <div class="stat"><b>0</b><span>accounts required</span></div>
   </div>
   <div class="head rv" style="margin:56px 0 0;max-width:720px">
-    <span class="eyebrow">What is honest about it</span>
-    <h2 style="font-size:clamp(22px,3vw,30px)">Not everything is built yet, and the app says so where it appears.</h2>
-    <p>These show a real explanation in place of placeholder data, rather than pretending:</p>
+    <span class="eyebrow">Shipped from the metal</span>
+    <h2 style="font-size:clamp(22px,3vw,30px)">Built directly into the native core, not simulated.</h2>
+    <p>Every transport and workflow capability runs natively on your machine from Rust:</p>
     <div class="honest">
-      <span>gRPC send</span><span>SOAP / WSDL</span><span>SSE</span><span>Flow graph</span>
-      <span>Mock servers</span><span>Monitors</span><span>AWS SigV4</span><span>mTLS</span>
-      <span>DNS/TLS timing split</span><span>multipart file parts</span>
+      <span>Visual Flow Graph</span><span>gRPC &amp; Protobuf</span><span>Embedded Mock Server</span>
+      <span>mTLS Client Certs</span><span>AWS SigV4</span><span>Server-Sent Events (SSE)</span>
+      <span>SOAP &amp; WSDL</span><span>DNS/TLS Timing Split</span><span>Collection Monitors</span>
+      <span>Integrated Terminal</span>
     </div>
   </div>
 </section>
@@ -574,7 +577,7 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
       </div>
       -->
     </div>
-    <p class="dl-meta" id="dl-meta">Latest release · macOS, Windows and Linux builds</p>
+    <p class="dl-meta" id="dl-meta"><span class="app-version">v1.2.0</span> · macOS, Windows and Linux builds</p>
     <p class="fineprint">
       Updates are verified by the installed app before they apply. macOS builds are not notarised yet, so the terminal installer is the preferred path.
     </p>
@@ -601,6 +604,20 @@ footer{border-top:1px solid var(--line); padding:36px 0; color:var(--mut2); font
 
 <script>
 document.getElementById("yr").textContent = new Date().getFullYear();
+
+// ── Single Source of Truth for App Version ──────────────────────────────
+// Default/fallback version in static HTML. Automatically synchronized across all elements
+// with class "app-version", and refreshed live whenever GitHub Releases API responds.
+const APP_VERSION = "v1.2.0";
+
+function syncVersion(ver) {
+  if (!ver) return;
+  const cleanVer = ver.startsWith("v") ? ver : `v${ver}`;
+  document.querySelectorAll(".app-version").forEach((el) => {
+    el.textContent = cleanVer;
+  });
+}
+syncVersion(APP_VERSION);
 
 // Scroll reveals: one observer, unobserve once shown.
 const io = new IntersectionObserver((es) => {
@@ -700,6 +717,9 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
   else if (here === "win") selectTab("win");
 
   const apply = (rel) => {
+    if (rel && rel.ver) {
+      syncVersion(rel.ver);
+    }
     const pick = (key) => rel.files.find((f) => ASSETS[key][0].test(f.name));
     const primaryKey = here && here.startsWith("mac") ? "install-mac" : here === "linux" ? "install-linux" : here;
     for (const el of document.querySelectorAll("[data-dl]")) {
@@ -711,17 +731,21 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
       else el.title = `${f.name} · ${mb(f.size)}`;
     }
     const mine = primaryKey && pick(primaryKey);
+    const verDisplay = rel?.ver || APP_VERSION;
     if (mine) {
       if (main && primaryKey === "win") main.href = mine.url;
       if (label && primaryKey === "win") label.textContent = `Download for ${ASSETS.win[1]}`;
-      meta.textContent = `${rel.ver} · ${mine.name} · ${mb(mine.size)}`;
+      meta.innerHTML = `<span class="app-version">${verDisplay}</span> · ${mine.name} · ${mb(mine.size)}`;
     } else {
-      meta.textContent = `${rel.ver} · macOS, Windows and Linux builds`;
+      meta.innerHTML = `<span class="app-version">${verDisplay}</span> · macOS, Windows and Linux builds`;
     }
   };
 
   const cached = readCache();
-  if (cached) apply(cached);                               // paint first, verify after
+  if (cached) {
+    if (cached.ver) syncVersion(cached.ver);
+    apply(cached);                               // paint first, verify after
+  }
   if (cached && Date.now() - cached.at < CACHE_TTL) return;
 
   try {
@@ -734,7 +758,7 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
     writeCache(rel);
     apply(rel);
   } catch {
-    if (!cached) meta.textContent = "Latest release · pick your file on GitHub";
+    if (!cached) meta.innerHTML = `<span class="app-version">${APP_VERSION}</span> · Latest release · pick your file on GitHub`;
   }
 })();
 
