@@ -30,8 +30,8 @@ Grab the latest build from the [**Releases**](../../releases/latest) page.
 
 | Platform | File |
 | --- | --- |
-| macOS (Apple Silicon) | `Aperture_<version>_aarch64.dmg` or `Aperture_<version>_aarch64.app.tar.gz` |
-| macOS (Intel) | `Aperture_<version>_x64.dmg` or `Aperture_<version>_x64.app.tar.gz` |
+| macOS (Apple Silicon) | `Aperture_<version>_aarch64.dmg` or `Aperture_aarch64.app.tar.gz` |
+| macOS (Intel) | `Aperture_<version>_x64.dmg` or `Aperture_x86_64.app.tar.gz` |
 | Windows | `Aperture_<version>_x64_en-US.msi` or `Aperture_<version>_x64-setup.exe` |
 | Linux | `Aperture_<version>_amd64.AppImage`, `Aperture_<version>_amd64.deb`, or `Aperture-<version>-1.x86_64.rpm` |
 
